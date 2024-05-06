@@ -24,9 +24,9 @@ export default function Nav(){
 
         <ul className="large-navbar hidden lg:flex lg:justify-center lg:items-center mr-6">
             <Link href="/about" className="p-4 hover:text-gray-400 transition-all duration-500">About Us</Link>
-            <Link href="/contact"className="p-4 hover:text-gray-400 duration-500">Contact</Link>
-            <Link href="/cart" className="p-4 hover:text-gray-400 duration-500">Your Cart</Link>
-            <Link href="/settings"className="p-4 hover:text-gray-400 duration-500">Settings</Link>
+            <Link href="/contact"className="p-4 hover:text-gray-400 transition-all duration-500">Contact</Link>
+            <Link href="/cart" className="p-4 hover:text-gray-400 transition-all duration-500">Your Cart</Link>
+            <Link href="/settings"className="p-4 hover:text-gray-400 transition-all duration-500">Settings</Link>
         </ul>
 
         <div className="burger-menu flex lg:hidden">
