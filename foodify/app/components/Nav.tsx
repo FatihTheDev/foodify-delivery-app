@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
 import {useState} from 'react';
-import { useAtom } from "jotai";
 
 export default function Nav(){
 
