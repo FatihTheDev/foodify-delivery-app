@@ -47,9 +47,9 @@ export default function Nav(){
             <hr />
             <Link href="/contact"><option className={navVisible ? "block p-3 text-yellow-700 hover:text-gray-400 transition-all duration-500" : "hidden"} value="contact">Contact</option></Link>
             <hr />
-            <Link href="/cart"><option className={navVisible ? "block p-3 text-yellow-700 hover:text-gray-400 transision-all duration-500" : "hidden"} value="cart">Your Cart</option></Link>
+            <Link href="/cart"><option className={navVisible ? "block p-3 text-yellow-700 hover:text-gray-400 transition-all duration-500" : "hidden"} value="cart">Your Cart</option></Link>
             <hr />
-            <Link href="/order"><option className={navVisible ? "block p-3 text-yellow-700 hover:text-gray-400 transision-all duration-500" : "hidden"} value="cart">Order</option></Link>
+            <Link href="/order"><option className={navVisible ? "block p-3 text-yellow-700 hover:text-gray-400 transition-all duration-500" : "hidden"} value="cart">Order</option></Link>
             <hr />
             <Link href="/settings"><option className={navVisible ? "block p-3 text-yellow-700 hover:text-gray-400 transition-all duration-500" : "hidden"} value="settings">Settings</option></Link>
         </section>
