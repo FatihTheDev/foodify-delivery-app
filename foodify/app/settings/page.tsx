@@ -1,5 +1,10 @@
-const Settings = () => {
+import { atom } from 'jotai'
+import { useAtom } from 'jotai'
 
+export const eyeComfortAtom = atom(false)
+
+const Settings = () => {
+  
   return (
     <div>
       <h1 className="text-2xl md:text-3xl text-yellow-700 ml-5 mt-4 text-center underline">Settings</h1>
