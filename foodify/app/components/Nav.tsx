@@ -23,11 +23,13 @@ export default function Nav(){
         </Link>
 
         <ul className="large-navbar hidden lg:flex lg:justify-center lg:items-center mr-6">
+          
             <Link href="/about" className="p-4 text-yellow-700 hover:text-gray-400 transition-all duration-500">About Us</Link>
             <Link href="/contact"className="p-4 text-yellow-700 hover:text-gray-400 transition-all duration-500">Contact</Link>
             <Link href="/cart" className="p-4 text-yellow-700  hover:text-gray-400 transition-all duration-500">Your Cart</Link>
             <Link href="/order" className="p-4 text-yellow-700  hover:text-gray-400 transition-all duration-500">Order</Link>
             <Link href="/settings"className="p-4 text-yellow-700  hover:text-gray-400 transition-all duration-500">Settings</Link>
+          
         </ul>
 
         <div className="burger-menu flex lg:hidden">
