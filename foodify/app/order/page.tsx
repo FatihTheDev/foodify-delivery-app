@@ -21,17 +21,30 @@ const OrderForm = () => {
         })
     }
 
+    const handleSubmit = async (e:any) => {
+        e.preventDefault();
+        const response = await fetch('API_URL', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(info)
+        });
+        const data = await response.json();
+        console.log(data);
+    }
+
   return (
     <>
     <div className="text">
       <h2 className="text-2xl text-yellow-700 text-center mt-7">Choose what food to order:</h2>
     </div>
-    <form>
+    <form onSubmit={handleSubmit}>
 
-        <div className="names flex justify-center mt-4 text-yellow-700 border-4 py-5 border-yellow-50 w-3/4 mx-auto">
+        <div className="names flex justify-center mt-4 text-yellow-700 border-4 py-5 border-yellow-50 w-3/4 mx-auto flex-col md:flex-row">
 
             <label htmlFor="firstname" className="ml-3">Enter your first name:</label>
-            <input value={info.firstname} onChange={handleChange} name="firstname" id="firstname" className="rounded-full p-2 h-7 ml-3 border-2 hover:border-yellow-600 transition-all duration-500" type="text" placeholder="Enter your first name" required/>
+            <input value={info.firstname} onChange={handleChange} name="firstname" id="firstname" className="rounded-full p-2 mb-5 h-7 ml-3 border-2 hover:border-yellow-600 transition-all duration-500" type="text" placeholder="Enter your first name" required/>
 
             <label htmlFor="lastname" className="ml-3">Enter your last name:</label>
             <input value={info.lastname} onChange={handleChange} name="lastname" id="lastname" className="rounded-full p-2 h-7 ml-3 border-2 hover:border-yellow-600 transition-all duration-500" type="text" placeholder="Enter your last name" required/>
@@ -83,10 +96,10 @@ const OrderForm = () => {
         </div>
 
 
-        <div className="pass text-center text-yellow-700 mt-6 border-4 py-5 border-yellow-50 w-3/4 mx-auto">
+        <div className="pass text-center text-yellow-700 mt-6 border-4 py-5 border-yellow-50 w-3/4 mx-auto flex justify-center flex-col md:flex-row">
 
         <label htmlFor="pass" className="ml-3">Enter your password:</label>
-        <input value={info.pass} onChange={handleChange} name="pass" id="pass" className="rounded-full p-2 h-7 ml-3 border-2 hover:border-yellow-600 transition-all duration-500" type="password" placeholder="Enter your password" required/>
+        <input value={info.pass} onChange={handleChange} name="pass" id="pass" className="rounded-full p-2 mb-5 h-7 ml-3 border-2 hover:border-yellow-600 transition-all duration-500 md:mb-0" type="password" placeholder="Enter your password" required/>
 
         <label htmlFor="passagain" className="ml-3">Repeat the password:</label>
         <input value={info.passagain} onChange={handleChange} name="passagain" id="passagain" className="rounded-full p-2 h-7 ml-3 border-2 hover:border-yellow-600 transition-all duration-500" type="password" placeholder="Enter your password" required/>
@@ -96,7 +109,7 @@ const OrderForm = () => {
         </div>
 
         <div className="btn flex justify-center items-center">
-        <button type="submit" className="bg-yellow-500 hover:bg-yellow-700 text-white transition-all duration-500 font-bold py-2 px-4 mt-5 rounded">Order</button>
+        <button type="submit" disabled={info.pass !== info.passagain} className="bg-yellow-500 hover:bg-yellow-700 text-white transition-all duration-500 font-bold py-2 px-4 mt-5 rounded">Order</button>
         </div>
 
     </form>
